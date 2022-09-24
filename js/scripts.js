@@ -76,14 +76,11 @@ Pizza.prototype.calculateCost = function(size) {
 
 // UI Logic
 function storeInput() {
-  let checkboxes = document.querySelectorAll("input[type=checkbox]");
+  let checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
   let pizzaChecked = [];
 
   for (let i = 0; i < checkboxes.length; i++) {
-    let checkbox = checkboxes[i];
-    if (checkbox.pizzaChecked)  {
-      pizzaChecked.push(checkbox.value);
-    }
+    pizzaChecked.push(checkboxes[i].value);
   }
   return pizzaChecked;
 }
@@ -91,8 +88,11 @@ function storeInput() {
 function handleFormSubmission(event)  {
   event.preventDefault();
   let pizzaRadio = document.querySelector("input[type=radio]:checked").value;
+  let createPizza = new Pizza(storeInput(),pizzaRadio);
+  createPizza.calculateCost(pizzaRadio);
 }
 
 window.addEventListener("load", function()  {
-  this.document.querySelector("form#pizza-list").addEventListener("submit",handleFormSubmission);
+ document.querySelector("form#pizza-list").addEventListener("submit",handleFormSubmission);
+ document.querySelector("form#pizza-list").addEventListener("submit",storeInput);
 });
