@@ -94,6 +94,7 @@ function handleFormSubmission(event)  {
   createPizza.calculateCost(pizzaRadio);
   displayPrice.removeAttribute("class");
   document.getElementById("output-p").innerHTML = createPizza.price;
+  displayPrice.setAttribute("class","output-display");
 }
 
 window.addEventListener("load", function()  {

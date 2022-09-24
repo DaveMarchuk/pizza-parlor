@@ -21,6 +21,34 @@
   width: 40%;
 }
 
+.pizza-container  {
+  margin: auto;
+  width: 50%;
+  border: solid black;
+  border-width: 1px;
+  background-color: peru;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.btn  {
+  margin: center;
+  width: auto;
+  margin-left: center;
+  margin-right: center;
+  margin-bottom: 10px;
+}
+
+.output-display {
+  margin: auto;
+  width: 50%;
+  border: solid tomato;
+  border-width: 1px;
+  background-color: burlywood;
+  margin-bottom: 2px;
+  text-align: center;
+}
 body  {
-  background-image: url("/img/pizza-background.jpg");
+  background-size: cover;
+  background-image: url("../img/pizza-background.jpg");
 }
