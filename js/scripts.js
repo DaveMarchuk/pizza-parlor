@@ -89,7 +89,11 @@ function handleFormSubmission(event)  {
   event.preventDefault();
   let pizzaRadio = document.querySelector("input[type=radio]:checked").value;
   let createPizza = new Pizza(storeInput(),pizzaRadio);
+  let displayPrice = document.getElementById("output");
+  displayPrice.setAttribute("class","hidden");
   createPizza.calculateCost(pizzaRadio);
+  displayPrice.removeAttribute("class");
+  document.getElementById("output-p").innerHTML = createPizza.price;
 }
 
 window.addEventListener("load", function()  {
