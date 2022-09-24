@@ -17,3 +17,6 @@ Pizza.prototype.addTopping = function(toppings) {
   return this.pizzaToppings;
 };
 Expected Output: ["Tomatoes","Pepperoni","Cheese"]
+
+Test: "My previous test was only able to pass through strings but not arrays. With the updated code, you should now be able to pass in an array. Later I will pass in an array of checkbox values that will get passed in and stored in the toppings."
+Code: 
