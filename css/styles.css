@@ -1,3 +1,15 @@
 .hidden {
   display: none;
 }
+
+.introduction {
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  border: solid orange;
+  border-width: 1%;
+  background-color: orangered;
+  margin-bottom: 5%;
+  box-sizing: border-box; 
+  text-align: center;
+}
