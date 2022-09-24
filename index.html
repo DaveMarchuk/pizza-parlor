@@ -8,8 +8,21 @@
 <body>
   <h1>Moo Moo Pizza Parlor</h1>
   <div id="pizza-container">
-    <H2><strong>Select your pizza toppings!</strong></H2>
     <form id="toppings-list">
+      <h2><strong>Pick the size of your pizza!</h2>
+      <label>
+        <input type="radio" name="pizza-size" value="small">
+        <em>Small + $4.00</em>
+      </label>
+      <label>
+        <input type="radio" name="pizza-size" value="medium">
+        <em>Medium + $6.00</em>
+      </label>
+      <label>
+        <input type="radio" name="pizza-size" value="large">
+        <em>Large + $8.00</em>
+      </label>
+      <H2><strong>Select your pizza toppings!</strong></H2>
       <label>
         <input id="pepperoni-topping" type="checkbox" value ="PEPPERONI">
         <em>Pepperoni + 1.00</em>
@@ -26,7 +39,7 @@
       </label>
       <br>
       <label>
-        <input id="tomato-topping" type="checkbox" value ="TOMATOES">
+        <input id="tomatoes-topping" type="checkbox" value ="TOMATOES">
         <em>Tomatoes + 0.50</em>
       </label>
       <br>
@@ -44,8 +57,11 @@
         <input id="mozarella-topping" type="checkbox" value ="MOZARELLA">
         <em>Mozarella + $1.00</em>
       </label>
-      <br>
+      <br><br>
+      <button type="submit" class="btn">Make your Pizza!</button>
     </form>
   </div>
+
+  <p id="output" class="output-display"></p>
 </body>
 </html>
