@@ -71,4 +71,7 @@ Pizza.prototype.calculateCost = function(size) {
   }
   this.price = costTracker;
   return this.price;
-}
+};
+
+
+// UI Logic
