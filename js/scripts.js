@@ -75,3 +75,24 @@ Pizza.prototype.calculateCost = function(size) {
 
 
 // UI Logic
+function storeInput() {
+  let checkboxes = document.querySelectorAll("input[type=checkbox]");
+  let pizzaChecked = [];
+
+  for (let i = 0; i < checkboxes.length; i++) {
+    let checkbox = checkboxes[i];
+    if (checkbox.pizzaChecked)  {
+      pizzaChecked.push(checkbox.value);
+    }
+  }
+  return pizzaChecked;
+}
+
+function handleFormSubmission(event)  {
+  event.preventDefault();
+  let pizzaRadio = document.querySelector("input[type=radio]:checked").value;
+}
+
+window.addEventListener("load", function()  {
+  this.document.querySelector("form#pizza-list").addEventListener("submit",handleFormSubmission);
+});
